@@ -31,13 +31,13 @@ This repository is created to:
 ```bash
 Projects/
 │
-├── Project-1/
+├── BMI Calculater-1/
 │   ├── index.html
 │   ├── style.css
 │   ├── script.js
 │   └── assets/
 │
-├── Project-2/
+├── Password Gen-2/
 │   ├── index.html
 │   ├── style.css
 │   ├── script.js
@@ -91,7 +91,7 @@ Projects/
 1. Clone this repository
 
 ```bash
-git clone <your-repository-link>
+git clone <repository-link>
 ```
 
 2. Open project folder
@@ -118,8 +118,8 @@ Suggestions and improvements are always welcome!
 
 # 📧 Connect With Me
 
-- GitHub: Your GitHub Profile
-- LinkedIn: Your LinkedIn Profile
+- GitHub: https://www.github.com/lokeshapanju
+- LinkedIn: https://www.linkedin.com/in/lokesh-sahu79/
 
 ---
 
@@ -129,4 +129,4 @@ If you like this repository, give it a ⭐ on GitHub.
 
 ---
 
-## 👨‍💻 Made with ❤️ by Lokesh 😎
+## 👨‍💻 Made with ❤️ by Lokesh(loki@) 😎
