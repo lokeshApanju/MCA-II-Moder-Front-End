@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(#655c5c,#120c0c);
+}
+header{
+    height: 100px;
+    width: 100%;
+    background-color: #3a3a3a;
+    padding: 10px;
+    border: 2px solid greenyellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height:100px ;
+    width: 50%;
+    display: flex;
+    display: flex;
+    
+    align-items: center;
+}
+.logo img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+.logo h1{
+    font-size: 35px;
+    font-style: italic;
+    padding: 10px;
+    color: #d2c3c3;
+}
+.nav{
+    height: 80px;
+    width: 100%;
+}
+.nav ul{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    color: #d2c3c3;
+    font-size: 20px;
+}
+.nav li{
+    padding: 2px;
+}
+.nav li:hover{
+    font-size: 22px;
+    color: #baacac;
+    transition: ease-in-out;
+    cursor: pointer;
+}
+main{
+    height: 1200px;
+    width: 100%;
+    /* border: 2px solid greenyellow; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    height: 350px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #d2c3c3;
+    border: 2px solid greenyellow;
+    font-style: italic;
+    padding: 20px;
+    margin: 40px;
+}
+.card:hover{
+    border: 2px solid #baacac;
+    transition: ease-in-out;
+    background-image: url(https://thumbs.dreamstime.com/b/colorful-sneakers-array-wooden-floor-concept-footwear-casual-fashion-sports-shoes-sneaker-collection-colorful-sneakers-327175098.jpg);
+}
+.card img{
+    height: 200px;
+    width: 200px;
+}
+.card img:hover{
+    height: 210px;
+    width: 210px;
+    transform: scale(1);
+    transition: ease-in-out;
+    border-radius: 20px;
+    
+}
+.card div{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.card button{
+    height: 40px;
+    width: 120px;
+    background-color: #837373;
+    color: #e6dbdb;
+    border-radius: 20px;
+    border: none;
+}
+.card button:hover{
+    height: 40px;
+    width: 120px;
+    background-color: #615757;
+    color: #f0e0e0;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+footer{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+footer p{
+    font-size: 40px;
+
+}
+.card button img{
+    height: 20px;
+    width: 20px;
+    border-radius: 30%;
+}

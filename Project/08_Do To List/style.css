@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #ddf6e7;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container {
+  background: rgb(124, 158, 166);
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+h1 {
+  text-align: center;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  background: rgb(5, 74, 81);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(46, 147, 178);
+}
+
+li {
+  background: #eee;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.delete {
+  background: red;
+  padding: 5px 10px;
+}

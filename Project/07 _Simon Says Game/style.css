@@ -1,0 +1,51 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.game {
+  width: 300px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  gap: 15px;
+}
+
+.btn {
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.red {
+  background: red;
+}
+
+.green {
+  background: green;
+}
+
+.blue {
+  background: blue;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.flash {
+  opacity: 1;
+  box-shadow: 0 0 20px white;
+}
+
+#start {
+  padding: 10px 20px;
+  font-size: 16px;
+}

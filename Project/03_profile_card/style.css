@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: #d5c8b7;
+}
+.card{
+    background-color: #b0b5f0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 150px;
+    width: 300px;
+    height: 350px;
+}
+
+.card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}   
+
+.card a img{
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+}

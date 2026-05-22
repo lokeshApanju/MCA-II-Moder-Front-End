@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZgenPass</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="password_421648.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <h1>ZgenPass</h1>
+        <i id="user-icon" class="fa-solid fa-user"></i>
+        <a href="login/login.html">
+            <h2 class="log-in">Log in / Sign up</h2>
+        </a>
+    </nav>
+    <main>
+        <div class="con-left">
+            <form id="input_form">
+
+                <div class="input-group">
+                    <label>
+                        UpperCase:
+                        <input id="input_Uppercase" type="checkbox">
+                    </label>
+                    <label>
+                        Numbers:
+                        <input id="input_Number" type="checkbox">
+                    </label>
+                    <label>
+                        Special Character:
+                        <input id="input_Character" type="checkbox">
+                    </label>
+                        <label>
+                            Lenght:
+                            <input id="input_lenght" type="number" placeholder="Enter Password Lenght">
+                        </label>
+                    <input type="submit" value="Generate">
+                </div>
+            </form>
+            <div>
+
+            </div>
+            <div>
+                <span id="output"></span>
+                <div id="icon-hide">
+                    <i class="fa-solid fa-copy"></i>
+                </div>
+            </div>
+            <div class ="sec-form">
+                <h3>Saved Passwords</h3>
+                <form>
+                    <input type="text" placeholder="App NAme">
+                    <input type="text" placeholder="Password">
+                    <input type="Submit" value="Save">
+                </form>
+                <div>
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="con-right">
+            <h4>Password History</h4>
+            <ul>
+
+            </ul>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>
