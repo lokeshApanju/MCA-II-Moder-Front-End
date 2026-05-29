@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <div class="header">
+            <h1 class="app-title">🌤 Weather App</h1>
+            <p class="app-subtitle">Check the weather anywhere</p>
+        </div>
+
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" id="cityInput" class="search-input" placeholder="Enter city name..."
+                autocomplete="off" />
+            <button class="search-btn" id="searchBtn">Search</button>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-box" id="errorBox">
+            <span class="error-icon">⚠️</span>
+            <span id="errorText">City not found. Please try again.</span>
+        </div>
+
+        <!-- Loading -->
+        <div class="loading-box" id="loadingBox">
+            <div class="spinner"></div>
+            <p>Fetching weather...</p>
+        </div>
+
+        <!-- Weather Card -->
+        <div class="weather-card" id="weatherCard">
+
+            <!-- City & Date -->
+            <div class="city-info">
+                <h2 class="city-name" id="cityName">India</h2>
+                <p class="city-date" id="cityDate">Monday, 28 May 2026</p>
+            </div>
+
+            <!-- Weather Icon & Temp -->
+            <div class="temp-section">
+                <div class="weather-icon" id="weatherIcon">☀️</div>
+                <div class="temperature" id="temperature">24°C</div>
+            </div>
+
+            <!-- Weather Description -->
+            <p class="weather-desc" id="weatherDesc">Clear Sky</p>
+
+            <!-- Toggle Unit -->
+            <div class="unit-toggle">
+                <button class="unit-btn active" id="celsiusBtn">°C</button>
+                <button class="unit-btn" id="fahrenheitBtn">°F</button>
+            </div>
+
+            <!-- Weather Details Grid -->
+            <div class="details-grid">
+
+                <div class="detail-card">
+                    <span class="detail-icon">💧</span>
+                    <span class="detail-value" id="humidity">72%</span>
+                    <span class="detail-label">Humidity</span>
+                </div>
+
+                <div class="detail-card">
+                    <span class="detail-icon">🌬️</span>
+                    <span class="detail-value" id="windSpeed">12 km/h</span>
+                    <span class="detail-label">Wind Speed</span>
+                </div>
+
+                <div class="detail-card">
+                    <span class="detail-icon">🌡️</span>
+                    <span class="detail-value" id="feelsLike">22°C</span>
+                    <span class="detail-label">Feels Like</span>
+                </div>
+
+                <div class="detail-card">
+                    <span class="detail-icon">👁️</span>
+                    <span class="detail-value" id="visibility">10 km</span>
+                    <span class="detail-label">Visibility</span>
+                </div>
+
+                <div class="detail-card">
+                    <span class="detail-icon">🔵</span>
+                    <span class="detail-value" id="pressure">1012 hPa</span>
+                    <span class="detail-label">Pressure</span>
+                </div>
+
+                <div class="detail-card">
+                    <span class="detail-icon">☁️</span>
+                    <span class="detail-value" id="clouds">20%</span>
+                    <span class="detail-label">Cloud Cover</span>
+                </div>
+
+            </div>
+
+            <!-- Sunrise & Sunset -->
+            <div class="sun-row">
+                <div class="sun-item">
+                    <span class="sun-icon">🌅</span>
+                    <div>
+                        <p class="sun-label">Sunrise</p>
+                        <p class="sun-time" id="sunrise">06:12 AM</p>
+                    </div>
+                </div>
+                <div class="sun-divider"></div>
+                <div class="sun-item">
+                    <span class="sun-icon">🌇</span>
+                    <div>
+                        <p class="sun-label">Sunset</p>
+                        <p class="sun-time" id="sunset">07:45 PM</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Quick City Buttons -->
+        <div class="quick-cities">
+            <p class="quick-label">Quick Search</p>
+            <div class="quick-btns">
+                <button class="quick-btn" data-city="Mumbai">🏙️ Mumbai</button>
+                <button class="quick-btn" data-city="Delhi">🕌 Delhi</button>
+                <button class="quick-btn" data-city="Bangalore">💻 Bangalore</button>
+                <button class="quick-btn" data-city="Chennai">🌊 Chennai</button>
+                <button class="quick-btn" data-city="Kolkata">🌉 Kolkata</button>
+                <button class="quick-btn" data-city="Hyderabad">💎 Hyderabad</button>
+                <button class="quick-btn" data-city="Jaipur">🏰 Jaipur</button>
+                <button class="quick-btn" data-city="Pune">🎓 Pune</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

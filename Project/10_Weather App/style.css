@@ -1,0 +1,435 @@
+/* ==============================
+   RESET & BASE
+============================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 20px;
+  color: #fff;
+}
+
+/* ==============================
+   APP WRAPPER
+============================== */
+.app {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ==============================
+   HEADER
+============================== */
+.header {
+  text-align: center;
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.app-subtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 4px;
+}
+
+/* ==============================
+   SEARCH BOX
+============================== */
+.search-box {
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 8px 8px 8px 16px;
+  backdrop-filter: blur(10px);
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  color: #fff;
+  font-family: inherit;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.search-btn {
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #e94560, #c62a47);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+.search-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.search-btn:active {
+  transform: translateY(0);
+}
+
+/* ==============================
+   ERROR BOX
+============================== */
+.error-box {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  background: rgba(233, 69, 96, 0.15);
+  border: 1px solid rgba(233, 69, 96, 0.4);
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  color: #ff8fa3;
+  animation: fadeIn 0.3s ease;
+}
+
+.error-box.show {
+  display: flex;
+}
+
+.error-icon {
+  font-size: 1.1rem;
+}
+
+/* ==============================
+   LOADING BOX
+============================== */
+.loading-box {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 30px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.loading-box.show {
+  display: flex;
+}
+
+.spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-top-color: #e94560;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==============================
+   WEATHER CARD
+============================== */
+.weather-card {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 28px 24px;
+  backdrop-filter: blur(16px);
+  animation: slideUp 0.4s ease;
+}
+
+.weather-card.show {
+  display: flex;
+}
+
+/* ==============================
+   CITY INFO
+============================== */
+.city-info {
+  text-align: center;
+}
+
+.city-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.city-date {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 4px;
+}
+
+/* ==============================
+   TEMP SECTION
+============================== */
+.temp-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.weather-icon {
+  font-size: 5rem;
+  line-height: 1;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+  animation: bob 3s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+.temperature {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+/* ==============================
+   WEATHER DESCRIPTION
+============================== */
+.weather-desc {
+  text-align: center;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: capitalize;
+  letter-spacing: 0.04em;
+}
+
+/* ==============================
+   UNIT TOGGLE
+============================== */
+.unit-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.unit-btn {
+  padding: 6px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.unit-btn.active {
+  background: #e94560;
+  border-color: #e94560;
+  color: #fff;
+}
+
+.unit-btn:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* ==============================
+   DETAILS GRID
+============================== */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.detail-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.detail-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.detail-icon {
+  font-size: 1.4rem;
+}
+
+.detail-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.detail-label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ==============================
+   SUNRISE & SUNSET
+============================== */
+.sun-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+
+.sun-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sun-icon {
+  font-size: 1.8rem;
+}
+
+.sun-label {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+}
+
+.sun-time {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.sun-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ==============================
+   QUICK CITIES
+============================== */
+.quick-cities {
+  text-align: center;
+}
+
+.quick-label {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.quick-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.quick-btn {
+  padding: 7px 14px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quick-btn:hover {
+  background: rgba(233, 69, 96, 0.25);
+  border-color: #e94560;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   ANIMATIONS
+============================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 420px) {
+  .app-title {
+    font-size: 1.6rem;
+  }
+
+  .temperature {
+    font-size: 3rem;
+  }
+
+  .weather-icon {
+    font-size: 3.8rem;
+  }
+
+  .details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .weather-card {
+    padding: 22px 16px;
+  }
+}
